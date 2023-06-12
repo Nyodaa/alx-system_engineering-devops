@@ -1,0 +1,9 @@
+#!/bin/bash
+file="iacta"
+line_number=3
+if [ -f "$file" ]; then
+  line=$(head -n "$line_number" "$file" | tail -n 1)
+  echo "$line"
+else
+  echo "File $file not found."
+fi
